@@ -10,4 +10,4 @@ job:
   enabled: true
   containers:
     - name: master-data
-      file_name: db/master-data.sql
+      file_name: db/master-data.js
