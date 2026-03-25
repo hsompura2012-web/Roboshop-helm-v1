@@ -1,2 +1,6 @@
 appName: cart
+configmapData:
+  CATALOGUE_HOST: "catalogue"
+  CATALOGUE_PORT: "8080"
+  REDIS_HOST: "redis-dev.harshitsompura.online"
 
