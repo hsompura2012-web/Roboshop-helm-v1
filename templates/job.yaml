@@ -15,7 +15,7 @@ spec:
               value: {{ .file_name }}
           envFrom:
             - configMapRef:
-                name: {{ .Values.appName }}
+                name: {{ $.Values.appName }}
         {{- end }}
       restartPolicy: Never
   backoffLimit: 0
