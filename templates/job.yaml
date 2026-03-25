@@ -1,0 +1,21 @@
+{{ if .Values.job.enabled | default false }}
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: {{ .Values.appName }}-schema
+spec:
+  template:
+    spec:
+      containers:
+        {{- range .Values.job.containers }}
+        - name: {{ .name }}
+          image: public.ecr.aws/w8x4g9h7/{{ .Values.projectName }}-v3/schema-load
+          env:
+            - name: SCHEMA_FILE
+              value: {{ .file_name }}
+          envFrom:
+            - configMapRef:
+                name: {{ .Values.appName }}
+      restartPolicy: Never
+  backoffLimit: 0
+{{ end }}
