@@ -1,0 +1,8 @@
+all:
+	get pull
+	helm upgrade frontend . -f dev-variable-dir/frontend.yaml
+	helm upgrade catalogue . -f dev-variable-dir/catalogue.yaml
+	helm upgrade user . -f dev-variable-dir/user.yaml
+	helm upgrade cart . -f dev-variable-dir/cart.yaml
+	helm upgrade shipping . -f dev-variable-dir/shipping.yaml
+	helm upgrade payment . -f dev-variable-dir/payment.yaml
