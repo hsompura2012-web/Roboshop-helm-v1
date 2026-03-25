@@ -1,11 +1,11 @@
-helm_install:
-		get pull
-		helm upgrade -i frontend . -f dev-variable-dir/frontend.yaml
-		helm upgrade -i catalogue . -f dev-variable-dir/catalogue.yaml
-		helm upgrade -i user . -f dev-variable-dir/user.yaml
-		helm upgrade -i cart . -f dev-variable-dir/cart.yaml
-		helm upgrade -i shipping . -f dev-variable-dir/shipping.yaml
-		helm upgrade -i payment . -f dev-variable-dir/payment.yaml
+install:
+	get pull
+	helm upgrade -i frontend . -f dev-variable-dir/frontend.yaml
+	helm upgrade -i catalogue . -f dev-variable-dir/catalogue.yaml
+	helm upgrade -i user . -f dev-variable-dir/user.yaml
+	helm upgrade -i cart . -f dev-variable-dir/cart.yaml
+	helm upgrade -i shipping . -f dev-variable-dir/shipping.yaml
+	helm upgrade -i payment . -f dev-variable-dir/payment.yaml
 
 
 
